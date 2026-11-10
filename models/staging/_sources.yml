@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: raw_data
+    schema: main
+    tables:
+      - name: raw_users
+      - name: raw_comments
+      - name: raw_api_posts

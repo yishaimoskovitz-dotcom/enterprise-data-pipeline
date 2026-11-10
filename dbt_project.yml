@@ -1,0 +1,14 @@
+name: 'my_ecommerce_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'my_ecommerce_dbt'     # <--- עדכן פה ל-my_ecommerce_dbt במקום default
+
+model-paths: ["models"]
+
+models:
+  my_ecommerce_dbt:
+    staging:
+      +materialized: view
+    mart:
+      +materialized: table

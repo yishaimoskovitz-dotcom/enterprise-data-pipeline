@@ -1,0 +1,19 @@
+{
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.zip": "default",
+        "*.parquet": "duckdb.dataFileViewer",
+        "*.csv": "duckdb.dataFileViewer",
+        "*.tsv": "duckdb.dataFileViewer",
+        "*.xlsx": "duckdb.dataFileViewer"
+    },
+    "duckdb.defaultDatabase": "dev",
+    "duckdb.databases": [
+        {
+            "alias": "dev",
+            "type": "file",
+            "path": "c:\\Users\\yishaimo\\הרצה מקומית\\my_dbt_project\\dev.duckdb",
+            "attached": true
+        }
+    ]
+}

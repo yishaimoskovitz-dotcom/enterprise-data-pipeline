@@ -1,0 +1,7 @@
+my_ecommerce_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dev.duckdb'       # שם קובץ ה-Database שיקם מקומית בתיקייה
+      schema: main

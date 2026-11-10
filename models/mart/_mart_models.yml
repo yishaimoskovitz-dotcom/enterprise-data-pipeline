@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: fct_user_comments
+    columns:
+      - name: email
+        tests:
+          - unique
+          - not_null
+      - name: total_comments
+        tests:
+          - not_null
+  - name: fct_user_comment_stats
+    columns:
+      - name: comment_id
+        tests:
+          - unique
+          - not_null
+      - name: post_id
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: comment_number_per_post
+        tests:
+          - not_null
+      - name: total_comments_on_post
+        tests:
+          - not_null
+  - name: fct_user_comment_gaps
+    columns:
+      - name: comment_id
+        tests:
+          - unique
+          - not_null
+      - name: post_id
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+     
+ 

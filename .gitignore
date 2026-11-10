@@ -1,0 +1,15 @@
+# Local Database
+*.duckdb
+*.duckdb.wal
+
+# Python & Environment
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# dbt Artifacts & Logs
+target/
+dbt_packages/
+logs/
