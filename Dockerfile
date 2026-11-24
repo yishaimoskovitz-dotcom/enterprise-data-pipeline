@@ -12,4 +12,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 5. הפקודה שתרץ אוטומטית כשהקונטיינר מתחיל לפעול
+# Local fallback (no Airflow). run_pipeline.py points dbt at /app/profiles.yml.
 CMD ["python", "run_pipeline.py"]
