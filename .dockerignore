@@ -1,0 +1,11 @@
+.git
+.venv
+venv
+**/__pycache__
+*.pyc
+*.duckdb
+*.duckdb.wal
+logs
+target
+.airflow
+dbt_packages

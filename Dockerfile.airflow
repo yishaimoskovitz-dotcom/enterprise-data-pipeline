@@ -1,0 +1,13 @@
+FROM apache/airflow:3.4.0
+
+# Pipeline libraries, installed into the image's existing Airflow environment.
+# LocalExecutor runs task processes inside the scheduler container, and those
+# tasks shell out to `python` and `dbt`. Both need to be on PATH in this image.
+# Building them in, instead of using _PIP_ADDITIONAL_REQUIREMENTS, installs
+# them once at build time rather than on every container start.
+#
+# The base image already contains Airflow. requirements.txt is only the
+# warehouse stack: pandas, duckdb, dbt-duckdb, and requests.
+USER airflow
+COPY requirements.txt /tmp/pipeline-requirements.txt
+RUN pip install --no-cache-dir -r /tmp/pipeline-requirements.txt
